@@ -8,7 +8,7 @@ public class Dice {
 		return d3 + 1;                     // 1-6		
 	}
 	
-	// roll the die n times and print the values
+	// roll the die n times and print the values	
 	public void rollMultiple(int n) {
 		for (int i=0; i<n; i++) { // har rettet fejlen hvor den tager ét kast mindre end indtastet
 			System.out.print(roll() + " ");
