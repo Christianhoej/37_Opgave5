@@ -9,9 +9,9 @@ public class Dice {
 	}
 	
 	// roll the die n times and print the values	
-	public void rollMultiple(int n) {
-		for (int i=0; i<n; i++) { 	   // har rettet fejlen hvor den tager ét kast mindre end indtastet
-			System.out.print(roll() + " ");
+	public void rollMultiple(int n) { 
+		for (int i=0; i<n; i++) { 	   
+			System.out.print(roll() + " "); 
 		}		
 	}
 }
