@@ -22,8 +22,23 @@ public class UseDice {
 		Scanner keyboard=new Scanner(System.in);   // Make an instance of keyboard Scanner
 		System.out.println("Welcome to the diceroll program");
 		System.out.println("How many times do you want to roll the dice?");
-		int n = keyboard.nextInt();  // Read integer
-		cup.rollMultiple(n);         // Roll the dice n times
-		keyboard.close();            // Close the scanner
+		while(true){
+			if(keyboard.hasNextInt()){
+				int n = keyboard.nextInt();  // Read integer
+				if(n>0){
+					cup.rollMultiple(n);         // Roll the dice n times
+					keyboard.close();            // Close the scanner
+					break;
+				}
+				else
+				{
+					System.out.println("Please enter an integer larger than 0: ");
+				}
+			}
+			else{
+				System.out.println("Please enter an integer: ");
+				keyboard.next();
+			}
+		}
 	}
 }
